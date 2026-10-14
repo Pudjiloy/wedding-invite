@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Дмитрий & Елизавета - Приглашение на свадьбу</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js" defer></script>
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="loader" id="loader">
+        <div class="loader-heart"></div>
+    </div>
+
+    <section class="hero" id="home">
+        <div class="falling-leaves">
+            <div class="leaf leaf-1" style="--leaf-size: 50px;"></div>
+            <div class="leaf leaf-2" style="--leaf-size: 70px;"></div>
+            <div class="leaf leaf-3" style="--leaf-size: 45px;"></div>
+            <div class="leaf leaf-4" style="--leaf-size: 80px;"></div>
+            <div class="leaf leaf-5" style="--leaf-size: 55px;"></div>
+            <div class="leaf leaf-6" style="--leaf-size: 65px;"></div>
+            <div class="leaf leaf-7" style="--leaf-size: 48px;"></div>
+            <div class="leaf leaf-8" style="--leaf-size: 75px;"></div>
+            <div class="leaf leaf-9" style="--leaf-size: 58px;"></div>
+            <div class="leaf leaf-10" style="--leaf-size: 68px;"></div>
+        </div>
+        <div class="hero-content">
+            <p class="hero-subtitle fade-in">Наше особенное приглашение для вас</p>
+            <h1 class="fade-in">Свадьба</h1>
+            <div class="hero-names fade-in">Дмитрий & Елизавета</div>
+            <p class="hero-date fade-in">03 сентября 2027</p>
+        </div>
+        <div class="scroll-indicator" onclick="document.getElementById('invitation').scrollIntoView({behavior: 'smooth'})">
+            <svg viewBox="0 0 24 24"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/></svg>
+        </div>
+    </section>
+
+    <section class="invitation" id="invitation">
+        <h2 class="section-title slide-left">Дорогие наши родные и друзья!</h2>
+        <div class="invitation-text fade-in">
+            <p>Этот день настал — мы женимся!</p>
+            <p>Мы будем счастливы оказаться в окружении близких нам людей, поэтому приглашаем Вас разделить с нами этот праздник!</p>
+            <div class="invitation-names">Дмитрий & Елизавета</div>
+            <p>Однажды и навсегда</p>
+        </div>
+    </section>
+
+    <section class="countdown-section">
+        <h2 class="section-title fade-in">До события осталось</h2>
+        <div class="countdown" id="countdown">
+            <div class="countdown-item scale-in">
+                <span class="countdown-number" id="days">000</span>
+                <span class="countdown-label">Дней</span>
+            </div>
+            <div class="countdown-item scale-in">
+                <span class="countdown-number" id="hours">00</span>
+                <span class="countdown-label">Часов</span>
+            </div>
+            <div class="countdown-item scale-in">
+                <span class="countdown-number" id="minutes">00</span>
+                <span class="countdown-label">Минут</span>
+            </div>
+            <div class="countdown-item scale-in">
+                <span class="countdown-number" id="seconds">00</span>
+                <span class="countdown-label">Секунд</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="timeline" id="program">
+        <h2 class="section-title slide-left">Программа нашего дня</h2>
+        <div class="timeline-items">
+            <div class="timeline-item slide-right">
+                <div class="timeline-content">
+                    <div class="timeline-time" style="color: rgb(74, 109, 129); box-shadow: 0px 2px;">03 сентября 2027</div>
+                    <div class="timeline-title">Торжественная <br>регистрация брака</div>
+                    <div class="timeline-desc">ул. Глинки д.4, 14:40 <br><br>Скажем друг другу самые важные слова
+                    </div>
+                </div>
+                <div class="timeline-dot"></div>
+            </div>
+            <div class="timeline-item slide-left">
+                <div class="timeline-content">
+                    <div class="timeline-time" style="color: rgb(74, 109, 129); box-shadow: 0px 2px;">04 сентября 2027</div>
+                    <div class="timeline-title">Выездная регистрация и банкет</div>
+                    <div class="timeline-desc">Разделите с нами самый счастливый день в нашей жизни</div>
+                </div>
+                <div class="timeline-dot"></div>
+            </div>
+            <div class="timeline-item slide-right">
+                <div class="timeline-content">
+                    <div class="timeline-time">15:45</div>
+                    <div class="timeline-title">Сбор гостей</div>
+                    <div class="timeline-desc">Время пролетит незаметно перед нашей церемонией</div>
+                </div>
+                <div class="timeline-dot"></div>
+            </div>
+            <div class="timeline-item slide-left">
+                <div class="timeline-content">
+                    <div class="timeline-time">16:00</div>
+                    <div class="timeline-title">Церемония</div>
+                    <div class="timeline-desc">Приготовьте платочки для самого трогательного момента</div>
+                </div>
+                <div class="timeline-dot"></div>
+            </div>
+            <div class="timeline-item slide-right">
+                <div class="timeline-content">
+                    <div class="timeline-time">17:00</div>
+                    <div class="timeline-title">Банкет</div>
+                    <div class="timeline-desc">Вкусные блюда и веселая программа от нашей классной ведущей</div>
+                </div>
+                <div class="timeline-dot"></div>
+            </div>
+            <div class="timeline-item slide-left">
+                <div class="timeline-content">
+                    <div class="timeline-time">23:00</div>
+                    <div class="timeline-title">Завершение</div>
+                    <div class="timeline-desc">Вы станете свидетелями создания новой семьи - нашей семьи.</div>
+                </div>
+                <div class="timeline-dot"></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="photos" id="photos">
+        <h2 class="section-title fade-in">Наши фото</h2>
+        <div class="photos-grid">
+            <div class="photo-card scale-in">
+                <img src="images/IMG_5696.PNG" alt="Couple Photo 1" loading="lazy">
+                
+            </div>
+            <div class="photo-card scale-in">
+                <img src="images/IMG_5694.PNG" alt="Couple Photo 2" loading="lazy">
+            </div>
+            <div class="photo-card scale-in">
+                <img src="images/IMG_5695.jpg" alt="Couple Photo 3" loading="lazy">
+            </div>
+        </div>
+    </section>
+
+    <section class="dress-code" id="dresscode">
+        <h2 class="section-title slide-left">Дресс-код события</h2>
+        <p class="dress-note fade-in">
+            Мы очень трепетно готовим наше торжество и будем рады, если вы поддержите его настроение и стилистику в своих образах
+        </p>
+        <div class="color-palette fade-in">
+            <div class="color-item">
+                <div class="color-box" style="background: #CCDDFF;"></div>
+                <div class="color-name">Небесно-голубой</div>
+            </div>
+            <div class="color-item">
+                <div class="color-box" style="background: #f5ebe0;"></div>
+                <div class="color-name">Бежевый</div>
+            </div>
+            <div class="color-item">
+                <div class="color-box" style="background: #c0c0c0;"></div>
+                <div class="color-name">Серебристый</div>
+            </div>
+        </div>
+        <p class="dress-note fade-in" style="font-size: 0.95rem; margin-top: 2rem;">
+            Пожалуйста, не тратьтесь на цветы. Хорошей альтернативой станет бутылка вина для нашего семейного бара.
+            <p>Впереди нас ждут большие планы и новые горизонты, <br>поэтому лучший подарок для нас - вклад в наше совместное будущее, <br>упакованный в конвертик.</p>
+        </p>
+    </section>
+
+    <section class="venue" id="venue">
+        <h2 class="section-title fade-in">Место мероприятия</h2>
+        <div class="venue-info">
+            <div class="venue-name fade-in">Ресторан "Веранда"</div>
+            <div class="venue-address fade-in">
+                 Смоленск, живописное место<br>
+                с видом на сосновый лес <br>
+                Лесная улица, 5
+            </div>
+            
+            <div class="venue-map fade-in" id="map-container">
+                <iframe 
+                    src="https://yandex.ru/map-widget/v1/?text=Смоленск%2C+Лесная+улица%2C+5&z=17" 
+                    width="100%" 
+                    height="100%" 
+                    frameborder="0"
+                    loading="lazy"
+                    style="border-radius: 10px;"
+                    allowfullscreen>
+                </iframe>
+            </div>
+            
+            <!-- <button class="submit-btn fade-in" style="margin-top: 2rem;" onclick="window.open('https://yandex.ru/maps', '_blank')">
+                Построить маршрут
+            </button> -->
+        </div>
+    </section>
+
+    <section class="rsvp" id="rsvp">
+        <h2 class="section-title slide-left">Очень вас ждём</h2>
+        <p class="fade-in" style="margin-bottom: 2rem; color: var(--text-light);">
+            Пожалуйста, подтвердите своё присутствие в анкете и ответьте на пару вопросов
+        </p>
+        <form class="rsvp-form fade-in" id="rsvpForm">
+    <div class="form-group">
+        <label for="name">Ваше имя и фамилия *</label>
+        <input type="text" id="name" name="name" required placeholder="Иван и Мария Ивановы">
+    </div>
+    <div class="form-group">
+        <label for="attendance">Сможете ли вы присутствовать? *</label>
+        <select id="attendance" name="attendance" required>
+            <option value="">Выберите вариант</option>
+            <option value="С удовольствием приду">С удовольствием приду</option>
+            <option value="К сожалению, не смогу">К сожалению, не смогу</option>
+        </select>
+    </div>
+    <div class="form-group">
+        <label for="guests">Количество гостей</label>
+        <select id="guests" name="guests">
+            <option value="1 человек">1 человек</option>
+            <option value="2 человека" selected>2 человека</option>
+            <option value="3 человека">3 человека</option>
+            <option value="4 человека">4 человека</option>
+        </select>
+    </div>
+    <div class="form-group">
+        <label for="message">Пожелания молодожёнам или вопросы</label>
+        <textarea id="message" name="message" rows="4" placeholder="Ваши пожелания..."></textarea>
+    </div>
+    <button type="submit" class="submit-btn">Отправить анкету</button>
+</form>
+    </section>
+
+    <section class="contact" id="contact">
+        <h2 class="section-title fade-in">Важные контакты</h2>
+        <p class="fade-in" style="margin-bottom: 2rem; color: var(--text-light);">
+            По всем вопросам обращайтесь к нам
+        </p>
+        <div class="contact-info">
+            <div class="contact-item fade-in">
+                <div class="contact-name">Елизавета</div>
+                <a href="tel:+79999740231" class="contact-phone">+7 (999) 974-02-31</a>
+            </div>
+            <div class="contact-item fade-in">
+                <div class="contact-name">Дмитрий</div>
+                <a href="tel:+79960969524" class="contact-phone">+7 (996) 096-95-24</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-names">Дмитрий & Елизавета</div>
+        <p class="footer-text">С любовью, ждём вас на нашей свадьбе!</p>
+        <p class="footer-text" style="margin-top: 2rem; font-size: 0.9rem;">03 сентября 2027</p>
+    </footer>
+
+    <!-- <script src="script.js" defer></script> -->
+
+</body>
+</html>
